@@ -1,5 +1,5 @@
 # Exam_2420
-Part 1 \
+Part 1 
 sudo apt upgrade is used to update most of the software on your Ubuntu OS \
 
 NOTE: You can check what to update by using sudo apt update
@@ -12,7 +12,7 @@ Part 2
 5. Pressing "I" and edit the text file just like normal word documents
 ![](Part2.png)
 
-Part 3 \
+Part 3 
 journalctl \
 1. To print logs for the current boot use command journalctl
 2. ![](Part3%20boot.png)
@@ -20,7 +20,7 @@ journalctl \
 4. ![](Part3%20priority.png)
 5. ![](Part3%20pretty%20json.png)
 
-Part 4 \
+Part 4 
 1. Add a user by using the command: useradd -ms /bin/bash USER_NAME 
 2. Add the user to the sudo group by using the command: usermod -aG sudo USER_NAME 
 3. Modify ownership by using the command:rsync --archive --chown=USER_NAME:USER_NAME ~/.ssh /home/USER_NAME 
@@ -42,7 +42,7 @@ echo "Users currently logged in are:" "$whoami"
 6. Give the script permission to excute by using chmod +x part4.sh 
 7. Excute the scipt by using ./part4.sh 
 
-Part 5 \
+Part 5 
 1. Create a bash script using touch part5.sh 
 2. Write a bash script 
 ```
@@ -62,20 +62,20 @@ WantedBy=multi-user.target
 3. Start the service by using sudo systemctl enable application.service
 4. To check status sudo systemctl status backup.service
 
-Part 6 \
+Part 6 
 1. Create a bash script using touch part6.sh 
 2. Write a bash script
-3. 
+3. Timer
 ```
 [Unit]
-Description=15min timer
+Description= 1min everyday timer
 
 [Timer]
 OnBootSec=1min
 OnUnitActiveSec=1d
 
 [Install]
-WantedBy=basic.target  
+WantedBy=timers.target  
 
 ```
 4. Start the service by using sudo systemctl enable application.service
