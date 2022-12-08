@@ -15,7 +15,10 @@ Part 2
 Part 3 \
 journalctl \
 1. To print logs for the current boot use command journalctl
-
+2. ![](Part3%20boot.png)
+3. To print a log that should have a priority of warning or more important use journalctl -p "warning"
+4. ![](Part3%20priority.png)
+5. ![](Part3%20pretty%20json.png)
 
 Part 4 \
 1. Add a user by using the command: useradd -ms /bin/bash USER_NAME 
@@ -39,3 +42,13 @@ echo "Users currently logged in are:" "$whoami"
 6. Give the script permission to excute by using chmod +x part4.sh 
 7. Excute the scipt by using ./part4.sh 
 
+Part 5
+1. Create a bash script using touch part5.sh 
+2. Write a bash script 
+```
+#!/bin/bash
+
+echo "hi Bob" > /home/vagranthi-bob
+```
+3. Start the service by using sudo systemctl enable application.service
+4. To check status sudo systemctl status backup.service
