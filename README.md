@@ -42,13 +42,41 @@ echo "Users currently logged in are:" "$whoami"
 6. Give the script permission to excute by using chmod +x part4.sh 
 7. Excute the scipt by using ./part4.sh 
 
-Part 5
+Part 5 \
 1. Create a bash script using touch part5.sh 
 2. Write a bash script 
 ```
 #!/bin/bash
 
 echo "hi Bob" > /home/vagranthi-bob
+
+[Unit]
+Description=example systemd service unit file.
+
+[Service]
+ExecStart=/bin/bash /usr/sbin/example.sh
+
+[Install]
+WantedBy=multi-user.target
 ```
 3. Start the service by using sudo systemctl enable application.service
 4. To check status sudo systemctl status backup.service
+
+Part 6 \
+1. Create a bash script using touch part6.sh 
+2. Write a bash script
+3. 
+```
+[Unit]
+Description=15min timer
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=basic.target  
+
+```
+4. Start the service by using sudo systemctl enable application.service
+5. To check status sudo systemctl status backup.service
