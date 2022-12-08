@@ -18,9 +18,24 @@ journalctl \
 
 
 Part 4 \
-1. Add a user by using the command: useradd -ms /bin/bash USER_NAME \
-2. Add the user to the sudo group by using the command: usermod -aG sudo USER_NAME \
-3. Modify ownership by using the command:rsync --archive --chown=USER_NAME:USER_NAME ~/.ssh /home/USER_NAME \
-4. Create a bash script using touch part4.sh
+1. Add a user by using the command: useradd -ms /bin/bash USER_NAME 
+2. Add the user to the sudo group by using the command: usermod -aG sudo USER_NAME 
+3. Modify ownership by using the command:rsync --archive --chown=USER_NAME:USER_NAME ~/.ssh /home/USER_NAME 
+4. Create a bash script using touch part4.sh 
 5. Write a bash script 
-6. Give the script permission to excute by using chmod +x part4.sh
+```
+#!/bin/bash
+
+if grep -i -q. "$1" ;then
+  if 1000 <= "$id -u" <= 5000
+  echo "Regular users on the system are" 
+  fi
+ else
+  echo "No Users"
+fi
+
+echo "Users currently logged in are:" "$whoami"
+```
+6. Give the script permission to excute by using chmod +x part4.sh 
+7. Excute the scipt by using ./part4.sh 
+
