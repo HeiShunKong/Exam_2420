@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if grep -i -q. "$1" ;then
+  if 1000 <= "$id -u" <= 5000
+  echo "Regular users on the system are" 
+  fi
+ else
+  echo "No Users"
+fi
+
+echo "Users currently logged in are:" "$whoami"
