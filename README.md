@@ -59,8 +59,8 @@ ExecStart=/bin/bash /usr/sbin/example.sh
 [Install]
 WantedBy=multi-user.target
 ```
-3. Start the service by using sudo systemctl enable application.service
-4. To check status sudo systemctl status backup.service
+3. Start the service by using sudo systemctl enable example.service
+4. To check status sudo systemctl status example.service
 
 Part 6 
 1. Create a bash script using touch part6.sh 
@@ -78,5 +78,5 @@ OnUnitActiveSec=1d
 WantedBy=timers.target  
 
 ```
-4. Start the service by using sudo systemctl enable application.service
-5. To check status sudo systemctl status backup.service
+4. Start the service by using sudo systemctl enable example.service
+5. To check status sudo systemctl status example.service
